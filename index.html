@@ -242,9 +242,9 @@ body.no-scroll{overflow:hidden}
   .p-steps{min-height:0;display:grid;gap:16px;padding-left:58px;--p:0}
   .p-rail{display:block;position:absolute;left:21px;top:30px;bottom:30px;width:2px;border-radius:2px;background:rgba(255,255,255,.1);overflow:hidden}
   .p-rail i{position:absolute;inset:0;background:linear-gradient(180deg,#16a6cf,#35288c,#7a2a8c,#c2185b,#ea5b2a,#f9b233);transform-origin:top;transform:scaleY(var(--p))}
-  .step{position:relative;inset:auto;opacity:.42;transform:translateY(8px);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
-    border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:24px 22px 26px;transition:opacity .5s var(--ease),transform .5s var(--ease),border-color .5s}
-  .step.reached{opacity:1;transform:none;border-color:rgba(255,255,255,.16)}
+  .step{position:relative;inset:auto;opacity:.42;transform:none;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:24px 22px 26px;transition:opacity .5s var(--ease),border-color .5s}
+  .step.reached{opacity:1;border-color:rgba(255,255,255,.16)}
   .node{display:grid;place-items:center;position:absolute;left:-58px;top:20px;width:44px;height:44px;border-radius:50%;font-size:14px;font-weight:600;color:#8d8f95;
     border:2px solid rgba(255,255,255,.14);background:var(--ink);transition:color .4s,border-color .4s,box-shadow .4s}
   .step.reached .node{color:#fff;border-color:transparent;background:linear-gradient(var(--ink),var(--ink)) padding-box,conic-gradient(#16a6cf,#9bcf3a,#35288c,#c2185b,#f9b233,#16a6cf) border-box;box-shadow:0 0 22px -4px rgba(194,24,91,.55)}
