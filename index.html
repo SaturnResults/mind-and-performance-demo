@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Mind &amp; Performance — Coaching with Ady Cole MBE</title>
-<meta name="description" content="Facilitating transformational change. Performance, emotional and subconscious coaching with Ady Cole MBE.">
+<title>Mind and Performance — Adrian Cole MBE</title>
+<meta name="description" content="Facilitating transformational change. Subconscious, emotional and performance coaching with Adrian Cole MBE.">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
@@ -176,6 +176,7 @@ body.no-scroll{overflow:hidden}
 
 /* testimonials */
 .t-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.t-head p{max-width:48ch;margin-top:18px;font-size:16.5px;color:var(--mid)}
 .t-head h2{font-size:clamp(40px,4.6vw,70px);max-width:13ch;margin-top:20px}
 .t-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto;gap:18px}
 .t{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;gap:34px;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
@@ -210,7 +211,7 @@ body.no-scroll{overflow:hidden}
 .foot-about img{height:46px;width:auto}
 .foot-about p{margin:22px 0 26px;max-width:38ch;font-size:15.5px;color:var(--body)}
 .foot-col h4{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:18px}
-.foot-col a{display:block;color:var(--ink);font-size:15.5px;padding:5px 0;width:fit-content;background:linear-gradient(90deg,#16a6cf,#35288c,#7a2a8c,#c2185b,#ea5b2a,#f9b233) no-repeat left bottom/0 1.5px;transition:background-size .3s}
+.foot-col a{display:block;overflow-wrap:anywhere;color:var(--ink);font-size:15.5px;padding:5px 0;width:fit-content;background:linear-gradient(90deg,#16a6cf,#35288c,#7a2a8c,#c2185b,#ea5b2a,#f9b233) no-repeat left bottom/0 1.5px;transition:background-size .3s}
 .foot-col a:hover{background-size:100% 1.5px}
 .foot-col p{font-size:14px;color:var(--mid);margin-top:14px;line-height:1.5}
 .foot-bottom{border-top:1px solid var(--line);padding:24px 0 30px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--mid)}
@@ -255,6 +256,10 @@ body.no-scroll{overflow:hidden}
   .foot-top{grid-template-columns:1fr 1fr;gap:36px 24px;padding:60px 0 40px}
   .foot-about{grid-column:1/-1}
   .foot-bottom{flex-direction:column;align-items:flex-start;gap:10px}
+  .marquee{padding:12px 0}
+  .track{gap:22px;animation-duration:20s}
+  .track span{font-size:15px;gap:22px}
+  .track span::after{width:5px;height:5px}
   .t-grid{grid-template-columns:1fr}
   .t.big{grid-row:auto}.t.wide{grid-column:auto}
 }
@@ -268,20 +273,22 @@ body.no-scroll{overflow:hidden}
     <a class="brand" href="#" aria-label="Mind and Performance, home"><picture><source media="(max-width:960px)" srcset="assets/logo-compact.png"><img src="assets/logo-full.png" alt="Mind and Performance — Coaching &amp; Training Services" width="268" height="46"></picture></a>
     <nav class="nav__links" aria-label="Primary">
       <span class="has-sub" aria-expanded="false">
-        <button type="button" aria-expanded="false">Coaching
+        <button type="button" aria-expanded="false">Information
           <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
         </button>
         <span class="subnav">
-          <a href="#approach"><i style="background:#16a6cf"></i><span><strong>Performance Coaching</strong><small>Leaders, founders and teams under pressure</small></span></a>
-          <a href="#approach"><i style="background:#7a2a8c"></i><span><strong>Emotional Coaching &amp; Detox</strong><small>Anxiety, stress, low mood and self-esteem</small></span></a>
-          <a href="#approach"><i style="background:#c2185b"></i><span><strong>Subconscious Coaching</strong><small>Fears, phobias and unwanted behaviours</small></span></a>
-          <a href="#approach"><i style="background:#f9b233"></i><span><strong>Sport &amp; Teams</strong><small>Athletes, group training and organisations</small></span></a>
+          <a href="#approach"><i style="background:#16a6cf"></i><span><strong>Subconscious Coaching</strong><small>Losing the 'weight' of negative experiences</small></span></a>
+          <a href="#approach"><i style="background:#35288c"></i><span><strong>Emotional Detox</strong><small>When was the last time you had a deep clean?</small></span></a>
+          <a href="#approach"><i style="background:#7a2a8c"></i><span><strong>Sport</strong><small>Remove the fear of failure at source</small></span></a>
+          <a href="#approach"><i style="background:#c2185b"></i><span><strong>Fears, Phobias &amp; Unwanted Behaviours</strong><small>Resolved where they started</small></span></a>
+          <a href="#approach"><i style="background:#ea5b2a"></i><span><strong>Children</strong><small>Support for children and young people</small></span></a>
+          <a href="#approach"><i style="background:#f9b233"></i><span><strong>Group &amp; Corporate</strong><small>Group training and team development</small></span></a>
         </span>
       </span>
-      <a href="#approach">About Ady</a>
+      <a href="#approach">About me</a>
       <a href="#process">How it works</a>
-      <a href="#stories">Results</a>
-      <a href="#contact">Contact</a>
+      <a href="#stories">Testimonials</a>
+      <a href="#contact">Get in touch</a>
     </nav>
     <div class="nav__right">
       <a class="btn btn-ink" href="#contact">Free consultation</a>
@@ -303,24 +310,26 @@ body.no-scroll{overflow:hidden}
   <nav class="drawer__links" aria-label="Mobile">
     <a href="#">Home <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <button class="drawer__acc" type="button" aria-expanded="false" aria-controls="drawerCoaching">
-      <span>Coaching</span>
+      <span>Information</span>
       <svg class="drawer__chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
     </button>
     <div class="drawer__panel" id="drawerCoaching" hidden>
-      <a class="sub" href="#approach">Performance Coaching <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="sub" href="#approach">Emotional Coaching &amp; Detox <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="sub" href="#approach">Subconscious Coaching <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="sub" href="#approach">Sport &amp; Teams <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="sub" href="#approach">Emotional Detox <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="sub" href="#approach">Sport <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="sub" href="#approach">Fears, Phobias &amp; Unwanted Behaviours <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="sub" href="#approach">Children <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="sub" href="#approach">Group &amp; Corporate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <p class="drawer__group">Mind &amp; Performance</p>
-    <a href="#approach">About Ady <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#approach">About me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <a href="#process">How it works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <a href="#stories">Results &amp; testimonials <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <a href="#contact">Contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#stories">Testimonials <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#contact">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </nav>
   <div class="drawer__foot">
-    <a class="btn btn-white" href="#contact">Book a free consultation</a>
-    <a class="btn btn-ghost" href="#contact">Email Ady</a>
+    <a class="btn btn-white" href="tel:+447775598401">Call 07775 598401</a>
+    <a class="btn btn-ghost" href="mailto:adrian@mindandperformance.com">Email Adrian</a>
   </div>
 </aside>
 
@@ -329,10 +338,10 @@ body.no-scroll{overflow:hidden}
   <div class="wrap">
     <div>
       <span class="label rv" style="--lc:#ea5b2a">Coaching &amp; Training · Adrian Cole MBE</span>
-      <h1 class="rv d1">Change that <span class="serif">actually</span> lasts.</h1>
-      <p class="rv d2">Most coaching talks about change. Adrian's work facilitates it, resolving the emotions and beliefs underneath anxiety, stress and under-performance, so you stop managing them and start moving past them.</p>
+      <h1 class="rv d1">Lighter, calmer, more <span class="serif">confident.</span></h1>
+      <p class="rv d2">I specialise in working with the subconscious mind. Using processes that, rather than just talk about change, actually facilitate change, I help people resolve the negative emotion and limiting beliefs that hold them back.</p>
       <div class="ctas rv d3">
-        <a href="#contact" class="btn btn-ink">Book a free call <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#contact" class="btn btn-ink">Take the first step <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#process" class="btn btn-line">How it works</a>
       </div>
     </div>
@@ -340,15 +349,15 @@ body.no-scroll{overflow:hidden}
       <span class="ring thin"></span>
       <span class="ring draw" id="spin"></span>
       <div class="photo"><img src="assets/ady.jpg" alt="Adrian Cole MBE"></div>
-      <div class="badge"><span class="dot">MBE</span><div><b>Adrian Cole MBE</b><small>Ex-Royal Marines · 4,000+ coaching hrs</small></div></div>
+      <div class="badge"><span class="dot">MBE</span><div><b>Adrian Cole MBE</b><small>Former Royal Marine · 4,000+ hours coaching</small></div></div>
     </div>
   </div>
 </section>
 
-<div class="marquee" aria-label="Clients Ady has worked with">
+<div class="marquee" aria-label="People Adrian has worked with">
   <div class="track">
-    <span>Royal Navy Officers</span><span>Chief Financial Officers</span><span>Police Detectives</span><span>Special Forces</span><span>Entrepreneurs</span><span>Elite Athletes</span><span>Emergency Services</span><span>Corporate Teams</span>
-    <span>Royal Navy Officers</span><span>Chief Financial Officers</span><span>Police Detectives</span><span>Special Forces</span><span>Entrepreneurs</span><span>Elite Athletes</span><span>Emergency Services</span><span>Corporate Teams</span>
+    <span>Senior Executives</span><span>Entrepreneurs</span><span>Military Personnel</span><span>Special Forces Operators</span><span>Emergency Services</span><span>Sports People</span><span>Children</span><span>Corporate Teams</span>
+    <span>Senior Executives</span><span>Entrepreneurs</span><span>Military Personnel</span><span>Special Forces Operators</span><span>Emergency Services</span><span>Sports People</span><span>Children</span><span>Corporate Teams</span>
   </div>
 </div>
 
@@ -358,15 +367,15 @@ body.no-scroll{overflow:hidden}
     <div class="intro">
       <div><span class="label rv" style="--lc:#16a6cf">The approach</span><h2 class="rv d1" style="margin-top:22px">Happiness, motivation and confidence are the allies of performance.</h2></div>
       <div class="rv d2">
-        <p>Depression, anxiety and stress are its enemies, and they quietly take a toll on physical health too. Ady works with the subconscious, where those patterns are held, using state-of-the-art processes for emotional release and belief change.</p>
-        <p>The result isn't a coping strategy. Clients describe feeling lighter, calmer and more in control, often in days rather than months. The difference is still there a year later.</p>
+        <p>Depression, anxiety and stress are its enemies. They are also quite capable of adversely affecting your physical health, and they usually do. Processes to reduce depression, anxiety and stress significantly, quickly (and in many cases completely) are available.</p>
+        <p>Unresolved negative emotion builds up and it has 'weight'. Most of us rationalise our past experiences and mistake this for resolution. By resolving them at the subconscious level, you move forward in life with the learning from your experiences, but without the emotional weight of them.</p>
       </div>
     </div>
     <div class="stats">
-      <div class="stat-box rv"><div class="n"><span data-count="40">0</span>+</div><p>Years of coaching, leadership and instruction</p></div>
-      <div class="stat-box rv d1"><div class="n"><span data-count="4000">0</span>+</div><p>Hours of logged one-to-one coaching</p></div>
-      <div class="stat-box rv d2"><div class="n"><span data-count="8586">0</span>m</div><p>Kangchenjunga, summited without supplementary oxygen</p></div>
-      <div class="stat-box rv d3"><div class="n"><span data-count="20">0</span>+</div><p>Years in the Royal Marines, incl. Chief Instructor at CTCRM</p></div>
+      <div class="stat-box rv"><div class="n"><span data-count="40">0</span>+</div><p>Years of coaching, leadership and instructional experience</p></div>
+      <div class="stat-box rv d1"><div class="n"><span data-count="4000">0</span>+</div><p>Hours of one-to-one coaching in emotional release and belief change</p></div>
+      <div class="stat-box rv d2"><div class="n"><span data-count="8586">0</span>m</div><p>Kangchenjunga, the world's 3rd highest mountain. Without supplementary oxygen</p></div>
+      <div class="stat-box rv d3"><div class="n"><span data-count="20">0</span>+</div><p>Years of military service in The Royal Marines</p></div>
     </div>
   </div>
 </section>
@@ -377,7 +386,7 @@ body.no-scroll{overflow:hidden}
     <div class="wrap p-sticky">
       <div class="p-left">
         <span class="label" style="--lc:#9bcf3a">How it works</span>
-        <h2>Three steps to a sturdier you.</h2>
+        <h2>Nothing to lose, everything to gain.</h2>
         <div class="dial">
           <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/>
             <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16a6cf"/><stop offset=".35" stop-color="#9bcf3a"/><stop offset=".65" stop-color="#c2185b"/><stop offset="1" stop-color="#f9b233"/></linearGradient></defs>
@@ -387,10 +396,10 @@ body.no-scroll{overflow:hidden}
       </div>
       <div class="p-steps" id="psteps">
         <span class="p-rail" aria-hidden="true"><i></i></span>
-        <div class="step on"><span class="node" aria-hidden="true">01</span><span class="k">Step 01 · The call</span><h3>A free, confidential conversation.</h3><p>No obligation and no need to reveal anything you're not ready to. Just listen, ask questions and see whether it feels right. Most people say it was time well spent.</p></div>
-        <div class="step"><span class="node" aria-hidden="true">02</span><span class="k">Step 02 · The work</span><h3>Change at the root, not the surface.</h3><p>Focused sessions using subconscious emotional release and belief-change processes, tailored to you. Both the part of you that wants change and the part that resists it are addressed.</p>
-          <ul><li>Anxiety &amp; stress</li><li>Low confidence</li><li>Fears &amp; phobias</li><li>PTSD &amp; OCD</li><li>Under-performance</li></ul></div>
-        <div class="step"><span class="node" aria-hidden="true">03</span><span class="k">Step 03 · The result</span><h3>Resilience that stays with you.</h3><p>Not calmer seas, a sturdier boat. Clients leave with confidence that comes from inside, not from circumstance, and the tools to keep it.</p></div>
+        <div class="step on"><span class="node" aria-hidden="true">01</span><span class="k">Step 01 · Make the call</span><h3>Initial conversations are always free.</h3><p>There is no obligation to reveal anything about yourself or why you are considering making changes. All you really need to do is listen and ask questions. Such calls cost nothing and, much more often than not, turn out to be time well spent.</p></div>
+        <div class="step"><span class="node" aria-hidden="true">02</span><span class="k">Step 02 · The work</span><h3>Resolve, rather than just rationalise.</h3><p>One part of us wants change but another part may not. Both this internal conflict and the anxiety around change are addressed. The processes can be 'content free' too, so you don't need to go into detail about anything you would rather not share.</p>
+          <ul><li>Anxiety &amp; stress</li><li>Depression</li><li>Low self-esteem</li><li>Fears &amp; phobias</li><li>PTSD &amp; OCD</li><li>Underperforming</li></ul></div>
+        <div class="step"><span class="node" aria-hidden="true">03</span><span class="k">Step 03 · The result</span><h3>We are building a sturdier boat.</h3><p>We are not talking about calmer seas. People typically feel lighter, calmer, more confident, more capable, more optimistic and more empowered, and the change lasts.</p></div>
       </div>
     </div>
   </div>
@@ -400,14 +409,14 @@ body.no-scroll{overflow:hidden}
 <section class="pad" id="stories">
   <div class="wrap">
     <div class="t-head">
-      <div><span class="label rv" style="--lc:#c2185b">Results</span><h2 class="rv d1">Don't take our word for it.</h2></div>
+      <div><span class="label rv" style="--lc:#c2185b">Testimonials</span><h2 class="rv d1">In their own words.</h2><p class="rv d2">I am also always happy to put you in touch with former clients who can vouch for me and the service I provide.</p></div>
       <a href="#" class="btn btn-line rv d2">Watch video testimonials</a>
     </div>
     <div class="t-grid">
-      <figure class="t big rv"><blockquote>“I can honestly say that meeting Ady Cole changed my life. If you feel lost and don't know where to turn, you should approach him.”</blockquote><figcaption class="who"><span class="av"><span>EL</span></span><div><b>Elizabeth Lucas</b>Royal Navy Officer</div></figcaption></figure>
-      <figure class="t rv d1"><blockquote>“Three days with Ady can have a significant positive impact on the rest of your life.”</blockquote><figcaption class="who"><span class="av"><span>RJ</span></span><div><b>Rahul Jhalawad</b>CFO, USA</div></figcaption></figure>
-      <figure class="t rv d2"><blockquote>“I left feeling balanced, positive and calm. I've learned to value myself.”</blockquote><figcaption class="who"><span class="av"><span>AK</span></span><div><b>Annie Keir</b>Police Detective, UK</div></figcaption></figure>
-      <figure class="t wide rv d1"><blockquote>“The impact on my mindset has been quite staggering. This time with Ady has outstripped every book and training course of my career, added together.”</blockquote><figcaption class="who"><span class="av"><span>AG</span></span><div><b>Andrea Gault FCA</b>Accounting Professional, UK</div></figcaption></figure>
+      <figure class="t big rv"><blockquote>“I can honestly say that meeting Ady Cole changed my life. I cannot recommend him highly enough. If you feel lost and don't know where to turn, you should approach him; I'm positive it will help.”</blockquote><figcaption class="who"><span class="av"><span>EL</span></span><div><b>Elizabeth Lucas</b>Royal Navy Officer</div></figcaption></figure>
+      <figure class="t rv d1"><blockquote>“Ady has had a profound impact on my life. I feel confidence inside me, not just from outside. Three days with Ady can have a significant positive impact to the rest of your life.”</blockquote><figcaption class="who"><span class="av"><span>RJ</span></span><div><b>Rahul Jhalawad</b>Chief Financial Officer, USA</div></figcaption></figure>
+      <figure class="t rv d2"><blockquote>“I left feeling balanced, positive and calm. The work I did with Ady has had a lasting effect. I'm writing almost a year later. I've learned to value myself.”</blockquote><figcaption class="who"><span class="av"><span>AK</span></span><div><b>Annie Keir</b>Police Detective, UK</div></figcaption></figure>
+      <figure class="t wide rv d1"><blockquote>“The impact on my mindset has been quite staggering. When I reflect on how many books and training courses I have read and attended over my career, I do marvel that this time with Ady has outstripped them all added together.”</blockquote><figcaption class="who"><span class="av"><span>AG</span></span><div><b>Andrea Gault FCA</b>Independent Accounting Professional, UK</div></figcaption></figure>
     </div>
   </div>
 </section>
@@ -416,10 +425,10 @@ body.no-scroll{overflow:hidden}
   <div class="wrap">
     <div class="cta-card rv">
       <span class="ring" aria-hidden="true"></span>
-      <h2>Everyone wants change. <span class="serif">Few take the first step.</span></h2>
+      <h2>Take the first step <span class="serif">and make the call.</span></h2>
       <div>
-        <p>The first call costs nothing but your time. Ask anything, share as much or as little as you like, and leave with a clear sense of whether this is right for you.</p>
-        <div class="ctas"><a href="#" class="btn btn-ink">Book a free call</a><a href="#" class="btn btn-line">Email Ady</a></div>
+        <p>Before deciding against calling based on the website, call anyway. It is normally easier to explain, answer your questions and generate trust over the phone. Initial conversations are always free and there is no commitment needed from you.</p>
+        <div class="ctas"><a href="tel:+447775598401" class="btn btn-ink">Call 07775 598401</a><a href="mailto:adrian@mindandperformance.com" class="btn btn-line">Email Adrian</a></div>
       </div>
     </div>
   </div>
@@ -428,28 +437,30 @@ body.no-scroll{overflow:hidden}
   <div class="wrap foot-top">
     <div class="foot-about">
       <img src="assets/logo-full.png" alt="Mind and Performance — Coaching &amp; Training Services" width="268" height="46">
-      <p>Performance, emotional and subconscious coaching with Ady Cole MBE. Facilitating transformational change for individuals, athletes and organisations.</p>
-      <a href="#contact" class="btn btn-ink">Book a free call</a>
+      <p>I specialise in working with the subconscious mind, helping people achieve lasting transformation, resilience and high performance. Facilitating transformational change.</p>
+      <a href="tel:+447775598401" class="btn btn-ink">Make the call</a>
     </div>
     <div class="foot-col">
       <h4>Coaching</h4>
-      <a href="#approach">Performance Coaching</a>
-      <a href="#approach">Emotional Coaching &amp; Detox</a>
       <a href="#approach">Subconscious Coaching</a>
-      <a href="#approach">Sport &amp; Teams</a>
+      <a href="#approach">Emotional Detox</a>
+      <a href="#approach">Sport</a>
+      <a href="#approach">Fears, Phobias &amp; Unwanted Behaviours</a>
+      <a href="#approach">Children</a>
+      <a href="#approach">Group &amp; Corporate</a>
     </div>
     <div class="foot-col">
       <h4>Explore</h4>
-      <a href="#approach">About Ady</a>
+      <a href="#approach">About me</a>
       <a href="#process">How it works</a>
-      <a href="#stories">Results</a>
+      <a href="#stories">Testimonials</a>
       <a href="#stories">Video testimonials</a>
     </div>
     <div class="foot-col">
       <h4>Get in touch</h4>
-      <a href="#contact">Book a free consultation</a>
-      <a href="#contact">Email Ady</a>
-      <p>Every first conversation is free, confidential and comes with no obligation.</p>
+      <a href="tel:+447775598401">07775 598401</a>
+      <a href="mailto:adrian@mindandperformance.com">adrian@mindandperformance.com</a>
+      <p>Initial conversations are always free and there is no commitment needed from you.</p>
     </div>
   </div>
   <div class="wrap foot-bottom">
