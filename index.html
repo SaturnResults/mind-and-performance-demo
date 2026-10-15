@@ -224,16 +224,14 @@ body.no-scroll{overflow:hidden}
 .demo-modal.is-open{visibility:visible;pointer-events:auto}
 .demo-modal__bg{position:absolute;inset:0;background:rgba(17,18,20,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .45s ease}
 .demo-modal.is-open .demo-modal__bg{opacity:1}
-.demo-card{position:relative;width:min(920px,100%);max-height:calc(100dvh - 40px);overflow:auto;background:#fff;border-radius:28px;display:grid;grid-template-columns:1fr 1.15fr;
+.demo-card{position:relative;width:min(600px,100%);max-height:calc(100dvh - 40px);overflow:auto;background:#fff;border-radius:28px;display:block;
   box-shadow:0 40px 90px -30px rgba(17,18,20,.55);opacity:0;transform:translateY(24px) scale(.97);transition:opacity .5s var(--ease),transform .6s var(--ease)}
 .demo-modal.is-open .demo-card{opacity:1;transform:none;transition-delay:.08s}
 .demo-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;z-index:2;background:linear-gradient(90deg,#16a6cf,#35288c,#7a2a8c,#c2185b,#ea5b2a,#f9b233)}
-.demo-media{position:relative;min-height:100%;background:#cfd9e2 url(assets/harry-wide.jpg) 22% 50%/cover no-repeat}
-.demo-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,18,20,0) 45%,rgba(17,18,20,.72))}
-.demo-media figcaption{position:absolute;z-index:1;left:22px;right:22px;bottom:20px;color:#fff;display:flex;align-items:center;gap:12px}
-.demo-media figcaption img{width:46px;height:46px;border-radius:50%;border:2px solid #fff;object-fit:cover}
-.demo-media figcaption b{display:block;font-size:16px;font-weight:600;letter-spacing:-.01em}
-.demo-media figcaption small{font-size:13px;opacity:.85}
+.demo-from{display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:10px 16px 10px 10px;margin:22px 0 0}
+.demo-from img{width:56px;height:56px;border-radius:14px;object-fit:cover;flex:none}
+.demo-from b{display:block;color:var(--ink);font-size:15px;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.demo-from small{font-size:13px;color:var(--mid)}
 .demo-body{padding:clamp(28px,4vw,46px)}
 .demo-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 12px 6px 8px}
 .demo-tag i{width:16px;height:16px;border-radius:50%;background:conic-gradient(#16a6cf,#35288c,#7a2a8c,#c2185b,#ea5b2a,#f9b233,#16a6cf)}
@@ -252,8 +250,7 @@ body.no-scroll{overflow:hidden}
 .demo-reopen{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer}
 .demo-reopen:hover{color:var(--ink)}
 @media (max-width:760px){
-  .demo-card{grid-template-columns:1fr;border-radius:24px}
-  .demo-media{min-height:190px;background-position:20% 40%}
+  .demo-card{border-radius:24px}
   .demo-body{padding:24px 22px 26px}
   .demo-body h2{font-size:28px;margin-top:14px}
   .demo-list{margin:16px 0 20px}
@@ -516,13 +513,11 @@ body.no-scroll{overflow:hidden}
   <div class="demo-card">
     <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="dg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16a6cf"/><stop offset=".5" stop-color="#c2185b"/><stop offset="1" stop-color="#f9b233"/></linearGradient></defs></svg>
     <button class="demo-close" type="button" aria-label="Close" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-    <figure class="demo-media" aria-hidden="true">
-      <figcaption><img src="assets/harry-face.jpg" alt=""><div><b>Harry Bingham</b><small>Saturn Results</small></div></figcaption>
-    </figure>
     <div class="demo-body">
       <span class="demo-tag"><i></i>Website preview</span>
       <h2 id="demoTitle">A first look at <span class="serif">your new website.</span></h2>
       <p>Hi Adrian, I'm Harry from Saturn Results. I've designed this preview to give you a real feel for how we'd bring Mind and Performance online. Have a good look around, scroll through everything and try it on your phone too.</p>
+      <div class="demo-from"><img src="assets/harry-face.jpg" alt="Harry Bingham"><div><b>Harry Bingham</b><small>Saturn Results · Web design &amp; development</small></div></div>
       <ul class="demo-list">
         <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="url(#dg)" stroke-width="1.6"/><path d="M6 10.4l2.6 2.5L14 7.5" stroke="#111214" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Everything is yours to shape. Every word, colour, photo and section can be changed.</span></li>
         <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="url(#dg)" stroke-width="1.6"/><path d="M6 10.4l2.6 2.5L14 7.5" stroke="#111214" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The full build goes further: multiple pages, a complete SEO setup, working contact forms and more.</span></li>
