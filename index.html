@@ -219,6 +219,47 @@ body.no-scroll{overflow:hidden}
 .foot-bottom a:hover{color:var(--ink)}
 .foot-bottom .sr b{color:var(--ink);font-weight:600}
 
+/* demo notice (shown once per visitor) */
+.demo-modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;visibility:hidden;pointer-events:none}
+.demo-modal.is-open{visibility:visible;pointer-events:auto}
+.demo-modal__bg{position:absolute;inset:0;background:rgba(17,18,20,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .45s ease}
+.demo-modal.is-open .demo-modal__bg{opacity:1}
+.demo-card{position:relative;width:min(920px,100%);max-height:calc(100dvh - 40px);overflow:auto;background:#fff;border-radius:28px;display:grid;grid-template-columns:1fr 1.15fr;
+  box-shadow:0 40px 90px -30px rgba(17,18,20,.55);opacity:0;transform:translateY(24px) scale(.97);transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.demo-modal.is-open .demo-card{opacity:1;transform:none;transition-delay:.08s}
+.demo-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;z-index:2;background:linear-gradient(90deg,#16a6cf,#35288c,#7a2a8c,#c2185b,#ea5b2a,#f9b233)}
+.demo-media{position:relative;min-height:100%;background:#cfd9e2 url(assets/harry-wide.jpg) 22% 50%/cover no-repeat}
+.demo-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,18,20,0) 45%,rgba(17,18,20,.72))}
+.demo-media figcaption{position:absolute;z-index:1;left:22px;right:22px;bottom:20px;color:#fff;display:flex;align-items:center;gap:12px}
+.demo-media figcaption img{width:46px;height:46px;border-radius:50%;border:2px solid #fff;object-fit:cover}
+.demo-media figcaption b{display:block;font-size:16px;font-weight:600;letter-spacing:-.01em}
+.demo-media figcaption small{font-size:13px;opacity:.85}
+.demo-body{padding:clamp(28px,4vw,46px)}
+.demo-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 12px 6px 8px}
+.demo-tag i{width:16px;height:16px;border-radius:50%;background:conic-gradient(#16a6cf,#35288c,#7a2a8c,#c2185b,#ea5b2a,#f9b233,#16a6cf)}
+.demo-body h2{font-size:clamp(30px,3.4vw,42px);margin:18px 0 14px;letter-spacing:-.035em}
+.demo-body h2 .serif{color:var(--body)}
+.demo-body > p{font-size:16.5px;color:var(--body)}
+.demo-list{list-style:none;margin:20px 0 26px;display:grid;gap:10px}
+.demo-list li{display:flex;gap:12px;font-size:15.5px;color:var(--ink);line-height:1.45}
+.demo-list svg{flex:none;width:20px;height:20px;margin-top:1px}
+.demo-note{font-size:13.5px;color:var(--mid);border-top:1px solid var(--line);padding-top:16px;margin-bottom:22px}
+.demo-ctas{display:flex;gap:10px;flex-wrap:wrap}
+.demo-ctas .btn{padding:13px 20px;font-size:14.5px}
+.demo-close{position:absolute;z-index:3;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.92);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:border-color .2s}
+.demo-close:hover{border-color:var(--ink)}
+.demo-close svg{width:16px;height:16px}
+.demo-reopen{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer}
+.demo-reopen:hover{color:var(--ink)}
+@media (max-width:760px){
+  .demo-card{grid-template-columns:1fr;border-radius:24px}
+  .demo-media{min-height:190px;background-position:20% 40%}
+  .demo-body{padding:24px 22px 26px}
+  .demo-body h2{font-size:28px;margin-top:14px}
+  .demo-list{margin:16px 0 20px}
+  .demo-ctas .btn{flex:1 1 100%;justify-content:center}
+}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -466,13 +507,66 @@ body.no-scroll{overflow:hidden}
   <div class="wrap foot-bottom">
     <span>© 2026 Mind and Performance · Coaching &amp; Training Services</span>
     <nav aria-label="Legal"><a href="#">Privacy</a><a href="#">Terms</a></nav>
-    <a class="sr" href="https://saturnresults.co.uk" target="_blank" rel="noopener">Demo website by <b>Saturn Results</b></a>
+    <span><button class="demo-reopen" type="button" data-demo-open>About this demo</button> · <a class="sr" href="https://saturnresults.co.uk" target="_blank" rel="noopener">Demo website by <b>Saturn Results</b></a></span>
   </div>
 </footer>
+
+<div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoTitle" aria-hidden="true">
+  <div class="demo-modal__bg" data-close></div>
+  <div class="demo-card">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="dg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16a6cf"/><stop offset=".5" stop-color="#c2185b"/><stop offset="1" stop-color="#f9b233"/></linearGradient></defs></svg>
+    <button class="demo-close" type="button" aria-label="Close" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <figure class="demo-media" aria-hidden="true">
+      <figcaption><img src="assets/harry-face.jpg" alt=""><div><b>Harry Bingham</b><small>Saturn Results</small></div></figcaption>
+    </figure>
+    <div class="demo-body">
+      <span class="demo-tag"><i></i>Website preview</span>
+      <h2 id="demoTitle">A first look at <span class="serif">your new website.</span></h2>
+      <p>Hi Adrian, I'm Harry from Saturn Results. I've designed this preview to give you a real feel for how we'd bring Mind and Performance online. Have a good look around, scroll through everything and try it on your phone too.</p>
+      <ul class="demo-list">
+        <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="url(#dg)" stroke-width="1.6"/><path d="M6 10.4l2.6 2.5L14 7.5" stroke="#111214" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Everything is yours to shape. Every word, colour, photo and section can be changed.</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="url(#dg)" stroke-width="1.6"/><path d="M6 10.4l2.6 2.5L14 7.5" stroke="#111214" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The full build goes further: multiple pages, a complete SEO setup, working contact forms and more.</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="url(#dg)" stroke-width="1.6"/><path d="M6 10.4l2.6 2.5L14 7.5" stroke="#111214" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>The copy has been adapted from your current website, so it still sounds like you.</span></li>
+      </ul>
+      <p class="demo-note">This is a design preview rather than the finished site, built to show the look, feel and quality you can expect.</p>
+      <div class="demo-ctas">
+        <button class="btn btn-ink" type="button" data-close>Explore the demo <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <a class="btn btn-line" href="https://saturnresults.co.uk/Harry" target="_blank" rel="noopener">Learn more about Harry</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- demo notice: opens on a visitor's first visit, reopen from the footer ---- */
+  const dm = document.getElementById('demoModal');
+  let dmLast = null;
+  function dmKey(e){
+    if (e.key === 'Escape') return closeDemo();
+    if (e.key !== 'Tab') return;
+    const f = [...dm.querySelectorAll('a[href],button')].filter(el => el.offsetParent !== null);
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+  }
+  function openDemo(){
+    dmLast = document.activeElement;
+    dm.classList.add('is-open'); dm.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('no-scroll'); document.addEventListener('keydown', dmKey);
+    setTimeout(() => dm.querySelector('.btn-ink').focus({preventScroll: true}), 350);
+  }
+  function closeDemo(){
+    dm.classList.remove('is-open'); dm.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('no-scroll'); document.removeEventListener('keydown', dmKey);
+    try { localStorage.setItem('mp-demo-seen', '1'); } catch (e) {}
+    if (dmLast && dmLast.focus) dmLast.focus({preventScroll: true});
+  }
+  dm.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeDemo));
+  document.querySelectorAll('[data-demo-open]').forEach(el => el.addEventListener('click', openDemo));
+  let seen = false; try { seen = localStorage.getItem('mp-demo-seen') === '1'; } catch (e) {}
+  if (!seen || location.hash === '#demo') setTimeout(openDemo, 900);
   const spin = document.getElementById('spin');
   const ps = document.getElementById('pscroll'), steps = [...document.querySelectorAll('.step')];
   const psteps = document.getElementById('psteps'), arc = document.getElementById('arc'), dnum = document.getElementById('dnum');
