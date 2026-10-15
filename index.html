@@ -29,6 +29,7 @@ img{display:block;max-width:100%}
 h1,h2,h3{color:var(--ink);font-weight:600;letter-spacing:-.035em;line-height:.98}
 .serif{font-family:var(--serif);font-style:italic;font-weight:300;letter-spacing:-.01em}
 .label{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid)}
+.label.no-dot::before{display:none}
 .label::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--spectrum);background:conic-gradient(#16a6cf,#9bcf3a,#35288c,#c2185b,#f9b233,#16a6cf)}
 
 /* spectrum ring (modernised original mark) */
@@ -230,7 +231,9 @@ body.no-scroll{overflow:hidden}
   .brand img,.site-header.is-solid .brand img{height:32px}
   .hero{padding-top:130px}
   .hero .wrap,.intro,.cta-card{grid-template-columns:1fr}
-  .orbit{justify-self:center;max-width:420px}
+  .orbit{justify-self:center;max-width:420px;width:calc(100% - 40px);margin-bottom:24px}
+  .orbit .ring.thin{inset:-14px}
+  .orbit .badge{left:50%;bottom:-18px;transform:translateX(-50%);white-space:nowrap;padding:12px 18px 12px 12px}
   .stats{grid-template-columns:1fr 1fr;row-gap:30px}
   .p-scroll{height:auto}
   .p-sticky{position:static;height:auto;grid-template-columns:1fr;padding:100px 0;gap:40px}
@@ -326,7 +329,7 @@ body.no-scroll{overflow:hidden}
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="label rv">Coaching &amp; Training · Adrian Cole MBE</span>
+      <span class="label no-dot rv">Coaching &amp; Training · Adrian Cole MBE</span>
       <h1 class="rv d1">Change that <span class="serif">actually</span> lasts.</h1>
       <p class="rv d2">Most coaching talks about change. Adrian's work facilitates it, resolving the emotions and beliefs underneath anxiety, stress and under-performance, so you stop managing them and start moving past them.</p>
       <div class="ctas rv d3">
