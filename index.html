@@ -21,16 +21,15 @@
   --wrap:min(1280px,100% - 56px); --ease:cubic-bezier(.2,.8,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--body);font-family:var(--sans);font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--paper);color:var(--body);font-family:var(--sans);font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .wrap{width:var(--wrap);margin-inline:auto}
 h1,h2,h3{color:var(--ink);font-weight:600;letter-spacing:-.035em;line-height:.98}
 .serif{font-family:var(--serif);font-style:italic;font-weight:300;letter-spacing:-.01em}
 .label{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid)}
-.label.no-dot::before{display:none}
-.label::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--spectrum);background:conic-gradient(#16a6cf,#9bcf3a,#35288c,#c2185b,#f9b233,#16a6cf)}
+.label::before{content:"";width:15px;height:15px;flex:none;background:var(--lc,#c2185b);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17.14 5.87A8 8 0 1 1 9.26 4.48' fill='none' stroke='black' stroke-width='2.8' stroke-linecap='round'/%3E%3Cpath d='M8.17 1.47 13.5 2.95 10.35 7.49Z' fill='black' stroke='black' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17.14 5.87A8 8 0 1 1 9.26 4.48' fill='none' stroke='black' stroke-width='2.8' stroke-linecap='round'/%3E%3Cpath d='M8.17 1.47 13.5 2.95 10.35 7.49Z' fill='black' stroke='black' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
 
 /* spectrum ring (modernised original mark) */
 .ring{position:relative;border-radius:50%;background:var(--spectrum);
@@ -329,7 +328,7 @@ body.no-scroll{overflow:hidden}
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="label no-dot rv">Coaching &amp; Training · Adrian Cole MBE</span>
+      <span class="label rv" style="--lc:#ea5b2a">Coaching &amp; Training · Adrian Cole MBE</span>
       <h1 class="rv d1">Change that <span class="serif">actually</span> lasts.</h1>
       <p class="rv d2">Most coaching talks about change. Adrian's work facilitates it, resolving the emotions and beliefs underneath anxiety, stress and under-performance, so you stop managing them and start moving past them.</p>
       <div class="ctas rv d3">
@@ -357,7 +356,7 @@ body.no-scroll{overflow:hidden}
 <section class="pad" id="approach">
   <div class="wrap">
     <div class="intro">
-      <div><span class="label rv">The approach</span><h2 class="rv d1" style="margin-top:22px">Happiness, motivation and confidence are the allies of performance.</h2></div>
+      <div><span class="label rv" style="--lc:#16a6cf">The approach</span><h2 class="rv d1" style="margin-top:22px">Happiness, motivation and confidence are the allies of performance.</h2></div>
       <div class="rv d2">
         <p>Depression, anxiety and stress are its enemies, and they quietly take a toll on physical health too. Ady works with the subconscious, where those patterns are held, using state-of-the-art processes for emotional release and belief change.</p>
         <p>The result isn't a coping strategy. Clients describe feeling lighter, calmer and more in control, often in days rather than months. The difference is still there a year later.</p>
@@ -377,7 +376,7 @@ body.no-scroll{overflow:hidden}
   <div class="p-scroll" id="pscroll">
     <div class="wrap p-sticky">
       <div class="p-left">
-        <span class="label">How it works</span>
+        <span class="label" style="--lc:#9bcf3a">How it works</span>
         <h2>Three steps to a sturdier you.</h2>
         <div class="dial">
           <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/>
@@ -401,7 +400,7 @@ body.no-scroll{overflow:hidden}
 <section class="pad" id="stories">
   <div class="wrap">
     <div class="t-head">
-      <div><span class="label rv">Results</span><h2 class="rv d1">Don't take our word for it.</h2></div>
+      <div><span class="label rv" style="--lc:#c2185b">Results</span><h2 class="rv d1">Don't take our word for it.</h2></div>
       <a href="#" class="btn btn-line rv d2">Watch video testimonials</a>
     </div>
     <div class="t-grid">
